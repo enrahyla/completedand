@@ -7,11 +7,13 @@ game = Game.new("The Keep on the Borderlands")
 player1 = Player.new("aaron", 60)
 player2 = Player.new("molvak", 125)
 player3 = Player.new("syntha")
+player4 = Player.new("klutz", 105)
 
 # Add players to a game
 game.add_player(player1)
 game.add_player(player2)
 game.add_player(player3)
+game.add_player(player4)
 
 game.play(2)
 game.print_stats
