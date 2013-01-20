@@ -1,4 +1,6 @@
+require_relative 'playable'
 class Player
+  include playable
   
   # make name and health readable and writable
   attr_accessor :name
@@ -16,22 +18,8 @@ class Player
     "I'm #{@name} with a health of #{@health} and a score of #{score}."    
   end
   
-  def blam
-    @health -= 10
-    puts "#{@name} got blammed!"
-  end
-  
-  def w00t
-    @health += 15
-    puts "#{@name} got w00ted!"
-  end
-  
   def score
     @health + points
-  end
-  
-  def strong?
-    @health >= 100
   end
   
   def <=>(other)
